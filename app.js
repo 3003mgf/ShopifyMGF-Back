@@ -28,9 +28,8 @@ app
     .use(bodyParser.urlencoded({extended: false}))
     .use(cookieParser()) //En LOGIN
     .use(logger("dev"))
-    .use(cors({
-        origin: ["http://localhost:3000", "https://mgf-shopify.netlify.app"]
-    })) //Para evitar CORS Policies
+    .use(cors({origin: "https://mgf-shopify.netlify.app", credentials: true})) //Para evitar CORS Policies
+   
     // .use((req, res, next)=>{
     //     res.header('Access-Control-Allow-Origin', 'https://mgf-shopify.netlify.app');
     //     res.header('Access-Control-Allow-Credentials', 'true');
