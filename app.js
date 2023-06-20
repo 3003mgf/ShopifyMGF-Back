@@ -31,13 +31,13 @@ app
     .use(cors({
         origin: ["http://localhost:3000", "https://mgf-shopify.netlify.app"]
     })) //Para evitar CORS Policies
-    // .use((req, res, next)=>{
-    //     res.header('Access-Control-Allow-Origin', 'https://mgf-shopify.netlify.app');
-    //     res.header('Access-Control-Allow-Credentials', 'true');
-    //     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    //     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-    //     next();
-    // })
+    .use((req, res, next)=>{
+        res.header('Access-Control-Allow-Origin', 'https://mgf-shopify.netlify.app');
+        res.header('Access-Control-Allow-Credentials', 'true');
+        res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+        res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+        next();
+    })
 
     .use("/api/user", userRoutes)
     .use("/api/product", productRoutes)
