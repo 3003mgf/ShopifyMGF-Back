@@ -30,7 +30,7 @@ app
     .use(logger("dev"))
 
     .use(cors({
-        origin: "http://localhost:3000", credentials:true
+        origin: "https://shopify-mgf.netlify.app", credentials:true
     })) //Para evitar CORS Policies
    
     // .use((req, res, next)=>{
