@@ -8,9 +8,7 @@ const express = require("express"),
 
 //ROUTES SET IN THE ORDER THEY WHERE CREATED
 Router
-      .get("/railway", (req, res, next)=>{
-            res.status(200).send("Success!");
-      })
+      
       .post("/register", userController.createUser)
       .post("/login", userController.login)
       .post("/admin-login", userController.adminLogin)
