@@ -31,7 +31,7 @@ app
 
 
 
-    .use(cors({origin: "*"})) //Para evitar CORS Policies
+    .use(cors()) //Para evitar CORS Policies
    
     // .use((req, res, next)=>{
     //     res.header('Access-Control-Allow-Origin', 'https://mgf-shopify.netlify.app');
