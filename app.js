@@ -28,7 +28,10 @@ app
     .use(bodyParser.urlencoded({extended: false}))
     .use(cookieParser()) //En LOGIN
     .use(logger("dev"))
-    .use(cors({origin: "https://mgf-shopify.netlify.app", credentials: true})) //Para evitar CORS Policies
+
+
+
+    .use(cors({origin: "*"})) //Para evitar CORS Policies
    
     // .use((req, res, next)=>{
     //     res.header('Access-Control-Allow-Origin', 'https://mgf-shopify.netlify.app');
@@ -37,6 +40,9 @@ app
     //     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
     //     next();
     // })
+
+
+
 
     .use("/api/user", userRoutes)
     .use("/api/product", productRoutes)
