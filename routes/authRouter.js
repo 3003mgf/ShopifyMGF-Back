@@ -13,7 +13,7 @@ Router
       .post("/login", userController.login)
       .post("/admin-login", userController.adminLogin)
       .get("/all-users", userController.getAllUsers)
-      .get("/user", authMiddleware, isAdmin, userController.getSingleUser) //A traves de Query
+      .get("/user", authMiddleware, userController.getSingleUser) //A traves de Query
       .delete("/delete-user/:userName", userController.deleteUser)
       .put("/edit-user", authMiddleware, userController.updateUser)
       .put("/block-user/:userName", authMiddleware, isAdmin, userController.blockUser)
