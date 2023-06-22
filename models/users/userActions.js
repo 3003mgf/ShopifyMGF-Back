@@ -247,7 +247,7 @@ userActions.forgotPassword = async(email, cb) => {
     const resetURL = `
     <h3>Shopify Support</h3>
     <p>Please follow this link to reset your password. This link is valid only for 10 minutes.</p> 
-    <a href="http://localhost:3000/reset-password/${token}">Click Here<a>`
+    <a href="https://shopify-mgf.netlify.app/reset-password/${token}">Click Here<a>`
     
     let data = {
       to: user.email,
